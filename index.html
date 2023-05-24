@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- displays site properly based on user's device -->
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="./assets/images/favicon-32x32.png">
+        <link rel="stylesheet" href="style.css">
+        <title>Frontend Mentor | Results summary component</title>
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <div class="card__result">
+                    <h2 class="card__result__heading">Your Result</h2>
+                    <div class="card__result__score-div">
+                        <p class="card__result__score-div__score">76</p>
+                        <p class="card__result__score-div__out-of">of 100</p>
+                    </div>
+                    <div class="card__result__comment-div">
+                        <p class="card__result__comment-div__remark">Great</p>
+                        <p class="card__result__comment-div__comparison">You scored higher than 65% of the people who have taken these tests.</p>
+                    </div>
+                </div>
+                <div class="card__summary">
+                    <h2 class="card__summary__heading">Summary</h2>
+                    <div class="card__summary__category-div">
+                        <div class="card__summary__category-div__first-div">
+                            <div class="card__summary__category-div__first-div__label-div">
+                                <img src="./assets/images/icon-reaction.svg" alt="">
+                                <p>Reaction</p>
+                            </div>
+                            <div class="card__summary__category-div__first-div__score-div">
+                                <div class="card__summary__category-div__first-div__score-div__score">80</div>
+                                <div class="card__summary__category-div__first-div__score-div__out-of"> / 100</div>
+                            </div>
+                        </div>
+                        <div class="card__summary__category-div__second-div">
+                            <div class="card__summary__category-div__second-div__label-div">
+                                <img src="./assets/images/icon-memory.svg" alt="">
+                                <p>Memory</p>
+                            </div>
+                            <div class="card__summary__category-div__second-div__score-div">
+                                <div class="card__summary__category-div__first-div__score-div__score">92</div>
+                                <div class="card__summary__category-div__first-div__score-div__out-of"> / 100</div>
+                            </div>
+                        </div>
+                        <div class="card__summary__category-div__third-div">
+                            <div class="card__summary__category-div__third-div__label-div">
+                                <img src="./assets/images/icon-verbal.svg" alt="">
+                                <p>Verbal</p>
+                            </div>
+                            <div class="card__summary__category-div__third-div__score-div">
+                                <div class="card__summary__category-div__first-div__score-div__score">61</div>
+                                <div class="card__summary__category-div__first-div__score-div__out-of"> / 100</div>
+                            </div>
+                        </div>
+                        <div class="card__summary__category-div__fourth-div">
+                            <div class="card__summary__category-div__fourth-div__label-div">
+                                <img src="./assets/images/icon-visual.svg" alt="">
+                                <p>Visual</p>
+                            </div>
+                            <div class="card__summary__category-div__fourth-div__score-div">
+                                <div class="card__summary__category-div__first-div__score-div__score">72</div>
+                                <div class="card__summary__category-div__first-div__score-div__out-of"> / 100</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </main>
+        <div>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Danny Cho</a>.
+        </div>
+    </body>
 </html>
