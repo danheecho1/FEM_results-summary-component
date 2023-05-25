@@ -2,9 +2,13 @@
 
 :root {
     --clr-red: hsl(0, 100%, 67%);
+    --clr-red-bg: hsla(0, 100%, 67%, 0.1);
     --clr-yellow: hsl(39, 100%, 56%);
+    --clr-yellow-bg: hsla(39, 100%, 56%, 0.1);
     --clr-teal: hsl(166, 100%, 37%);
+    --clr-teal-bg: hsl(166, 100%, 37%, 0.1);
     --clr-blue: hsl(234, 85%, 45%);
+    --clr-blue-bg: hsla(234, 85%, 45%, 0.1);
 
     --clr-grad-slate-blue: hsl(252, 100%, 67%);
     --clr-grad-royal-blue: hsl(241, 81%, 54%);
@@ -18,6 +22,10 @@
 
     /* mobile: 375px */
     /* desktop: 1440px */
+
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
 }
 
 * {
@@ -33,5 +41,90 @@
 body {
     display: flex;
     flex-direction: column;
-    /* background-color: black; */
+    min-width: 375px;
+}
+
+.card__result {
+    background: linear-gradient(var(--clr-grad-slate-blue), var(--clr-grad-royal-blue));
+    border-bottom-left-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    text-align: center;
+    padding: 1.375em 3em 2em;
+}
+
+.card__result__heading {
+    color: var(--clr-neut-light-lavender);
+}
+
+.card__result__score-div {
+    background: linear-gradient(var(--clr-grad-violet-blue), var(--clr-grad-persian-blue));
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 1.5em auto;
+    padding-top: 1em;
+}
+
+.card__result__score-div__score {
+    color: var(--clr-neut-white);
+    font-weight: var(--fw-extra-bold);
+    font-size: 3.25rem;
+}
+
+.card__result__score-div__out-of {
+    font-size: 0.875rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neut-light-lavender);
+    opacity: 0.5;
+}
+
+.card__result__comment-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.card__result__comment-div__remark {
+    color: var(--clr-neut-white);
+    font-weight: var(--fw-bold);
+    font-size: 1.3rem;
+}
+
+.card__result__comment-div__comparison {
+    color: var(--clr-neut-light-lavender);
+    font-size: 0.85rem;
+    line-height: 1.5em;
+}
+
+.card__summary {
+    padding: 0 1.5em;
+}
+
+.card__summary__heading {
+    margin: 1.5em 0;
+}
+
+.card__summary__category-div__first-div {
+    display: flex;
+    background-color: var(--clr-red-bg);
+    border-radius: 12px;
+    justify-content: space-between;
+    padding: 0.875em 1em;
+}
+
+.card__summary__category-div__first-div__label-div {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.card__summary__category-div__first-div__label-div__label {
+    font-weight: var(--fw-bold);
+    color: var(--clr-red);
+    font-size: 0.9rem;
+}
+
+.card__summary__category-div__first-div__score-div {
+    display: flex;
+    align-items: center;
 }
