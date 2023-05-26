@@ -2,13 +2,13 @@
 
 :root {
     --clr-red: hsl(0, 100%, 67%);
-    --clr-red-bg: hsla(0, 100%, 67%, 0.1);
+    --clr-red-bg: hsla(0, 100%, 67%, 0.05);
     --clr-yellow: hsl(39, 100%, 56%);
-    --clr-yellow-bg: hsla(39, 100%, 56%, 0.1);
+    --clr-yellow-bg: hsla(39, 100%, 56%, 0.05);
     --clr-teal: hsl(166, 100%, 37%);
-    --clr-teal-bg: hsl(166, 100%, 37%, 0.1);
+    --clr-teal-bg: hsl(166, 100%, 37%, 0.05);
     --clr-blue: hsl(234, 85%, 45%);
-    --clr-blue-bg: hsla(234, 85%, 45%, 0.1);
+    --clr-blue-bg: hsla(234, 85%, 45%, 0.05);
 
     --clr-grad-slate-blue: hsl(252, 100%, 67%);
     --clr-grad-royal-blue: hsl(241, 81%, 54%);
@@ -58,8 +58,8 @@ body {
 
 .card__result__score-div {
     background: linear-gradient(var(--clr-grad-violet-blue), var(--clr-grad-persian-blue));
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     margin: 1.5em auto;
     padding-top: 1em;
@@ -104,6 +104,12 @@ body {
     margin: 1.5em 0;
 }
 
+.card__summary__category-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
 .card__summary__category-div__first-div {
     display: flex;
     background-color: var(--clr-red-bg);
@@ -112,7 +118,34 @@ body {
     padding: 0.875em 1em;
 }
 
-.card__summary__category-div__first-div__label-div {
+.card__summary__category-div__second-div {
+    display: flex;
+    background-color: var(--clr-yellow-bg);
+    border-radius: 12px;
+    justify-content: space-between;
+    padding: 0.875em 1em;
+}
+
+.card__summary__category-div__third-div {
+    display: flex;
+    background-color: var(--clr-teal-bg);
+    border-radius: 12px;
+    justify-content: space-between;
+    padding: 0.875em 1em;
+}
+
+.card__summary__category-div__fourth-div {
+    display: flex;
+    background-color: var(--clr-blue-bg);
+    border-radius: 12px;
+    justify-content: space-between;
+    padding: 0.875em 1em;
+}
+
+.card__summary__category-div__first-div__label-div, 
+.card__summary__category-div__second-div__label-div, 
+.card__summary__category-div__third-div__label-div, 
+.card__summary__category-div__fourth-div__label-div {
     display: flex;
     align-items: center;
     gap: 0.75em;
@@ -124,7 +157,64 @@ body {
     font-size: 0.9rem;
 }
 
-.card__summary__category-div__first-div__score-div {
+.card__summary__category-div__second-div__label-div__label {
+    font-weight: var(--fw-bold);
+    color: var(--clr-yellow);
+    font-size: 0.9rem;
+}
+
+.card__summary__category-div__third-div__label-div__label {
+    font-weight: var(--fw-bold);
+    color: var(--clr-teal);
+    font-size: 0.9rem;
+}
+
+.card__summary__category-div__fourth-div__label-div__label {
+    font-weight: var(--fw-bold);
+    color: var(--clr-blue);
+    font-size: 0.9rem;
+}
+
+.card__summary__category-div__first-div__score-div, 
+.card__summary__category-div__second-div__score-div, 
+.card__summary__category-div__third-div__score-div, 
+.card__summary__category-div__fourth-div__score-div {
     display: flex;
     align-items: center;
+}
+
+.card__summary__category-div__first-div__score-div__score, 
+.card__summary__category-div__second-div__score-div__score, 
+.card__summary__category-div__third-div__score-div__score, 
+.card__summary__category-div__fourth-div__score-div__score {
+    font-size: 0.9rem;
+    color: var(--clr-neut-dark-gray-blue);
+}
+
+.card__summary__category-div__first-div__score-div__score span, 
+.card__summary__category-div__second-div__score-div__score span, 
+.card__summary__category-div__third-div__score-div__score span, 
+.card__summary__category-div__fourth-div__score-div__score span {
+    font-size: 0.9rem;
+    color: var(--clr-neut-dark-gray-blue);
+    font-weight: var(--fw-extra-bold);
+    margin-left: 0.125em;
+    opacity: 0.5;
+}
+
+.card__summary__button {
+    width: 100%;
+    border: none;
+    border-radius: 3.75rem;
+    padding: 0.875em;
+    background-color: var(--clr-neut-dark-gray-blue);
+    color: var(--clr-neut-white);
+    font-weight: var(--fw-bold);
+    margin: 1.25em 0;
+}
+
+.attribution, 
+.attribution a {
+    font-size: 0.75rem;
+    text-align: center;
 }
