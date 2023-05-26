@@ -41,7 +41,8 @@
 body {
     display: flex;
     flex-direction: column;
-    min-width: 375px;
+    width: 375px;
+    margin: 0 auto;
 }
 
 .card__result {
