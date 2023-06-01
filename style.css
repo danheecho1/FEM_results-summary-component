@@ -43,6 +43,11 @@ body {
     flex-direction: column;
     width: 375px;
     margin: 0 auto;
+    gap: 1rem;
+}
+
+.card {
+    box-shadow: 0 25px 35px var(--clr-neut-pale-blue);
 }
 
 .card__result {
